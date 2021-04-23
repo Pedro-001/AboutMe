@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', monospace;
+    
+}
+
+a{
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+.home-body{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -8,10 +21,9 @@ body{
     right: 0;
 }
 
-a{
-    text-decoration: none;
-    display: inline;
-    color: black;
+.grid-container{
+    max-width: 980px;
+    margin: auto;
 }
 
 header{
@@ -44,7 +56,7 @@ header .icons span{
 }
 
 nav{
-    background-color: #f7f3e9;
+    background-color: #a3d2ca;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 90px;
@@ -56,7 +68,7 @@ nav .nav-logo-container {
 
 nav .nav-logo-container img{
     width: 220px;
-    margin-top: -60px;
+    margin-top: -70px;
 }
 
 nav .nav-profile-link {
@@ -65,6 +77,8 @@ nav .nav-profile-link {
     justify-content: flex-end;
     margin-right: 50px;
     margin-top: -60px;
+    font-weight: bold;
+
 }
 
 nav .nav-profile-link a{
@@ -73,41 +87,128 @@ nav .nav-profile-link a{
     
 }
 
-main {
+
+.home-main-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
     height: 100%;
     background-image: url(../assets/img/pexels-craig-dennis-205421.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    justify-content: center;
-}
-
-main .home-main-container {
-    text-align: center;
-    margin-top: 5.7rem;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: monospace;
 }
 
-main .home-main-container-title {
-    color: white;
-    letter-spacing: 10px;
-    font-size: 40px;
-    width: 50rem;
-}
-
-main .home-main-container-buttom { 
-    height: 40px;
-    width: 100px;
-    background-color: #5eaaa8;
-    margin: 100px auto;
-    border-radius: 10px;
+.home-main-container section{
     display: grid;
+    grid-column: 2;
+    justify-items: center;
+    height: 350px;
+    margin-top: 80px;
 }
 
-main .home-main-container-buttom a {
-    font-size: 15px;
+.home-main-container-title {
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    font-weight: 700px;
+    letter-spacing: 10px;
+    color: white;
+    text-align: center;
+    
+}
+
+.home-main-container-button { 
+    height: 50px;
+    width: 110px;
+    background-color: #5eaaa8;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.home-main-container-button a {
+    font-size: 17px;
     margin: auto;
     font-weight: bold;
     color: white;
+}
+
+.blogs-main{
+    display: grid;
+}
+
+.blogs-news-container{
+    background-color: #f7f3e9;
+    padding: 0 50px 40px;
+}
+
+.blogs-main-new{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+.blogs-news-img-container{
+    grid-column: 1;
+}
+
+.blogs-news-img-container img{
+    width: 80%;
+}
+
+.blogs-news-info-container{
+    grid-column: 2;
+}
+
+.blogs-news-info-container p{
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container{
+    padding: 0 50px 40px;
+    text-align: center;
+}
+
+.blogs-posts-container h3{
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.blogs-button{
+    border: 1px solid #5eaaa8;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.blogs-posts-container .post-container{
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 30%;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.blogs-posts-container .post-container p{
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container .post-container img{
+    width: 100%;
+
+}
+
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #22272d;
+    border-top: 35px solid #f05945;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    margin-top: 30px;
+
 }
